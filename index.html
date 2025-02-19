@@ -194,7 +194,7 @@
 
             <div class="columns is-centered has-text-justified">
             <td colspan="4">
-                <img src="images/context-distll1_00.png" alt="" width="300" />
+                <img src="images/context-distll1_00.png" alt="" width="700" />
             </td>
             </div>
             <div class="content has-text-justified">
@@ -206,7 +206,7 @@
             </div>
             <div class="columns is-centered has-text-justified">
             <td colspan="4">
-                <img src="images/multi-teacher1_00.png" alt="" width="300" />
+                <img src="images/multi-teacher1_00.png" alt="" width="700" />
             </td>
             </div>
             <div class="content has-text-justified">
@@ -229,31 +229,31 @@
             <div class="content has-text-justified">
               <td colspan="3">
                 <p>
-                  In the Results section, we demonstrate some more results.
+                  Our model achieves SOTA performance across both indoor and outdoor scenes.
                 </p>
               </td>
             </div>
-            <h3 class="title is-3">More results from our study</h3>
+            <h3 class="title is-3">Qualitative Comparison of Relative Depth Estimations</h3>
             <div class="content has-text-justified">
               <td colspan="3">
                 <img src="images/vis_comp_00.png" alt="" width="2160" />
                 <p>
-                  <b>Qualitative Comparison of Relative Depth Estimations</b>: We present visual comparisons of depth predictions from our method ("Ours") alongside other classic depth estimators ("MiDaS v3.1"~\cite{birkl2023midasv31model}, and models using DINOv2~\cite{oquab2023dinov2} or SD as priors ("DepthAnythingv2~\cite{depth_anything_v2}", "Marigold"~\cite{marigold}, "Genpercept"~\cite{xu2024diffusion}). Compared to state-of-the-art methods, the depth map produced by our model, particularly at the position indicated by the \textbf{black arrow}, exhibits finer granularity and more detailed depth estimation.
+                  We present visual comparisons of depth predictions from our method ("Ours") alongside other classic depth estimators ("MiDaS v3.1"~\cite{birkl2023midasv31model}, and models using DINOv2~\cite{oquab2023dinov2} or SD as priors ("DepthAnythingv2~\cite{depth_anything_v2}", "Marigold"~\cite{marigold}, "Genpercept"~\cite{xu2024diffusion}). Compared to state-of-the-art methods, the depth map produced by our model, particularly at the position indicated by the \textbf{black arrow}, exhibits finer granularity and more detailed depth estimation.
                 </p>
               </td>
             </div>
 
-            <h3 class="title is-3">Comparisons with State-of-the-Arts</h3>
+            <h3 class="title is-3">Qualitative Comparison with Baseline Distillation</h3>
             <div class="content has-text-justified">
               <td colspan="3">
                 <img src="images/depth_point2_00.png" alt="" width="2160" />
                 <p>
-                  <b>Qualitative Comparison with Baseline Distillation</b>: We compare our method with the baseline as the previous distillation method, which uses only global normalization. The red diagonal lines represent the ground truth, with results closer to the lines indicating better performance. Our method produces smoother surfaces, sharper edges, and more detailed depth maps.
+                  We compare our method with the baseline as the previous distillation method, which uses only global normalization. The red diagonal lines represent the ground truth, with results closer to the lines indicating better performance. Our method produces smoother surfaces, sharper edges, and more detailed depth maps.
                 </p>
               </td>
             </div>
 
-            <h3 class="title is-3">Style-Based CFG</h3>
+            <h3 class="title is-3">Distilled Generative Models</h3>
             <div class="columns is-centered has-text-centered">
               <td colspan="3">
                 <img src="images/distill_gen_00.png" alt="" width="512" />
@@ -262,32 +262,26 @@
             <div class="content has-text-justified">
             <td colspan="3">
               <p>
-                <b>Distilled Generative Models</b>: Instead of just distilling classical depth models, we also apply distillation to generative models, aiming for the student model to capture their rich details.
+                Instead of just distilling classical depth models, we also apply distillation to generative models, aiming for the student model to capture their rich details.
               </p>
             </td>
+            </div>
+            <h3 class="title is-3">Cross-Modal AdaIN integration with InstantStyle</h3>
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <img src="images/cvpr25_02.png" alt="" width="2160" />
+              </td>
             </div>
 
             <h3 class="title is-3">More comparisons with State-of-the-Arts</h3>
             <div class="content has-text-justified">
               <td colspan="3">
-                <img src="assets/quality_2.jpg" alt="" width="2160" />
-                <p>
-                  <b>Qualitatively</b>: Given a reference image and a text prompt, <b><i>StyleStudio</i></b> effectively preserves image style while accurately adhering to text prompts for generation and ensuring the layout stability.
-                </p>
+                <img src="images/cvpr25_03.png"" alt="" width="2160" />
               </td>
             </div>
 
-            <h3 class="title is-3">Cross-Modal AdaIN integration with InstantStyle</h3>
-            <div class="content has-text-justified">
-              <td colspan="3">
-                <img src="assets/instantstyle_crossmodaladain.jpg" alt="" width="2160" />
-                <p>
-                  Qualitative results of using Cross-Modal AdaIN in InstantStyle. The results demonstrate that Cross-Modal AdaIN effectively prevents style overfitting. The final generated results consistently align with the textual descriptions.
-                </p>
-              </td>
-            </div>
 
-            <h3 class="title is-3">Teacher model integration with StyleCrafter</h3>
+<!--             <h3 class="title is-3">Teacher model integration with StyleCrafter</h3>
             <div class="content has-text-justified">
               <td colspan="3">
                 <img src="assets/stylecrafter_integration.jpg" alt="" width="2160" />
@@ -296,7 +290,7 @@
                   In addition to ensuring layout stability, the Teacher Model also effectively reduces the occurrence of content leakage when applied to StyleCrafter.
                 </p>
               </td>
-            </div>
+            </div> -->
 
           </div>
         </div>
