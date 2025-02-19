@@ -68,7 +68,7 @@
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Ying Cui</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Chi Zhang</a><sup>*</sup>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Chi Zhang</a><sup>4*</sup>
                   </span>
             </div>
 
@@ -121,7 +121,7 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="assets/teaser.jpg" alt=""/>
+        <img src="images/teaser8_00.png" alt=""/>
 
         <h2 class="content has-text-centered">
             <strong>Zero-shot prediction on in-the-wild images.</strong> Our model, distilled from Genpercept and DepthAnythingv2, outperforms other methods by delivering more accurate depth details and exhibiting superior generalization for monocular depth estimation on in-the-wild images. 
@@ -160,33 +160,33 @@
             <div class="content has-text-justified">
               <td colspan="3">
                 <p>
-                  Our solution is designed to be <b>fine-tuning free</b> and can be combined with different methods.
+                  <strong>{Overview of Cross-Context Distillation.</strong> Our method combines local and global depth information to enhance the student model’s predictions. It includes two scenarios: (1) \textit{Shared-Context Distillation}, where both models use the same image for distillation; and (2) \textit{Local-Global Distillation}, where the teacher predicts depth for overlapping patches while the student predicts the full image. The Local-Global loss $\mathcal{L}_{\text{lg}}$ (Top Right) ensures consistency between local and global predictions, enabling the student to learn both fine details and broad structures, improving accuracy and robustness.
                 </p>
               </td>
             </div>
 
             <div class="columns is-centered has-text-justified">
               <td colspan="3">
-                <img src="assets/crossModalAdaIN.jpg" alt="" width="700" />
+                <img src="images/method6_00.png" alt="" width="700" />
               </td>
             </div>
             <div class="content has-text-justified">
               <td colspan="3">
-                <p>
-                  <b>Cross-Modal AdaIN</b>: We propose a novel method for depth estimation that better integrates both text and image conditioning.
+                 <p>
+                  <b>{Overview of Cross-Context Distillation</b>: Our method combines local and global depth information to enhance the student model’s predictions. It includes two scenarios: (1) \textit{Shared-Context Distillation}, where both models use the same image for distillation; and (2) \textit{Local-Global Distillation}, where the teacher predicts depth for overlapping patches while the student predicts the full image. The Local-Global loss $\mathcal{L}_{\text{lg}}$ (Top Right) ensures consistency between local and global predictions, enabling the student to learn both fine details and broad structures, improving accuracy and robustness.
                 </p>
               </td>
             </div>
             <p><br></p>
             <div class="columns is-centered has-text-justified">
             <td colspan="3">
-                <img src="assets/teacherModel.jpg" alt="" width="700" />
+                <img src="images/norm5_00.png" alt="" width="700" />
             </td>
             </div>
             <div class="content has-text-justified">
               <td colspan="3">
                 <p>
-                    <b>Teacher Model</b>: We propose a method that stabilizes the layout during denoising by using a teacher model to guide the transfer of style.
+                   <b>Normalization Strategies.</b>: We compare four normalization strategies: Global Norm~\cite{ranftl2020midas}, Hybrid Norm~\cite{zhang2022hdn}, Local Norm, and No Norm. The figure visualizes how each strategy processes pixels within the normalization region (Norm. Area). The red dot represents any pixel within the region.
                 </p>
               </td>
             </div>
@@ -194,13 +194,25 @@
 
             <div class="columns is-centered has-text-justified">
             <td colspan="4">
-                <img src="assets/SCFG.jpg" alt="" width="300" />
+                <img src="images/context-distll1_00.png alt="" width="300" />
             </td>
             </div>
             <div class="content has-text-justified">
               <td colspan="3">
                 <p>
-                    <b>Style-Based CFG</b>:  We utilize layout-controlled generation, which helps in preserving the structure while removing undesired styles.
+                    <b>Different Inputs Lead to Different Pseudo Labels</b>: Global Depth: The teacher model predicts depth using the entire image, and the local region's prediction is cropped from the output. Local Depth: The teacher model directly takes the cropped local region as input, resulting in more refined and detailed depth estimates for that area, capturing finer details compared to using the entire image.
+                </p>
+              </td>
+            </div>
+            <div class="columns is-centered has-text-justified">
+            <td colspan="4">
+                <img src="images/multi-teacher1_00.png alt="" width="300" />
+            </td>
+            </div>
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <p>
+                    <b>{Multi-teacher Mechanism.</b>: We introduce a multi-teacher distillation approach, where pseudo-labels are generated from multiple teacher models. At each training iteration, one teacher is randomly selected to produce pseudo-labels for unlabeled images.
                 </p>
               </td>
             </div>
@@ -214,8 +226,8 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@misc{yan2024distillanydepth,
-        title={DistillAnyDepth: Refined Distillation Creates a Stronger Monocular Depth Estimator}, 
-        author={Yanyan and Qi Wu},
+        title={Distill Any Depth: Distillation Creates a Stronger Monocular Depth Estimator}, 
+        author={Xiankang He, Dongyan Guo, Hongji Li, Ruibo Li, Ying Cui, and Chi Zhang},
         year={2024},
         eprint={2412.08503},
         archivePrefix={arXiv},
